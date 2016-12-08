@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import Header from './components/Header';
+import Greeting from './components/Greeting';
+import Logos from './components/Logos';
 
 class App extends Component {
   render() {
     return (
-      <h1>My Portfolio</h1>
+      <div>
+        <Header />
+        <Greeting />
+        <Logos />
+      </div>
     );
   }
 }
