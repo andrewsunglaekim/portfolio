@@ -7,7 +7,7 @@ import riot from '../../public/images/riot.png'
 import square_enix from '../../public/images/square_enix.png'
 import steam from '../../public/images/steam.png'
 
-export default {
+export default [
   bethesda,
   activision,
   blizzard,
@@ -16,4 +16,4 @@ export default {
   riot,
   square_enix,
   steam,
-}
+]

@@ -4,6 +4,13 @@ body {
   font-family: sans-serif;
 }
 
-.greeting {
+.greeting, .intro {
   height: 100vh;
 }
+
+/* Greeting */
+
+img.logo {
+  width: 35%;
+}
+
