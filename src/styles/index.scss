@@ -30,8 +30,8 @@ img.logo {
   width: 35%;
 }
 
-/* Speach Bubble */
-div.speachBubble {
+/* Speach Bubbles */
+@mixin oval(){
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,28 +43,57 @@ div.speachBubble {
   border-radius: 50%;
 }
 
-.speachBubble:after {
+@mixin triangle(){
   position: absolute;
-  z-index: -1;
-  top: 70%;
-  left: -.3%;
   content: '';
   height: 0;
   width: 0;
+}
+
+div.speachBubble {
+  @include oval
+}
+
+.speachBubble:after {
+  @include triangle; 
+  z-index: 0;
+  top: 70%;
+  left: -.3%;
   border-bottom: solid 22px white;
   border-left: solid 22px transparent;
   border-right: solid 22px transparent;
 }
 
 .speachBubble:before {
-  position: absolute;
-  z-index: -2;
+  @include triangle;
+  z-index: -1;
   top: 70%;
-  left: -1%;
-  content: '';
-  height: 0;
-  width: 0;
+  left: -0.9%;
   border-bottom: solid 23px black;
   border-left: solid 23px transparent;
   border-right: solid 23px transparent;
+}
+
+div.topSpeechBubble {
+  @include oval;
+}
+
+.topSpeechBubble:after {
+  @include triangle;
+  left: 5%;
+  top: 5%;
+  z-index: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 22px solid white;
+}
+
+.topSpeechBubble:before {
+  @include triangle;
+  left: 4.7%;
+  top: 4.1%;
+  z-index: -1;
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 23px solid black;
 }
