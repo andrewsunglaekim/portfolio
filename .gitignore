@@ -1,2 +1,4 @@
 node_modules
 *.swp
+.sass-cache
+src/styles/.sass-cache
