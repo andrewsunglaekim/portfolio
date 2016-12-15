@@ -50,10 +50,10 @@ class Logos extends Component {
         left,
         top
       }
-      console.log(positionStyle)
       return(
         <Logo
           key={i}
+          clockwise={i % 2 === 0}
           style={positionStyle}
           imgSrc={image}/>
       )
