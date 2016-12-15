@@ -18,7 +18,6 @@ class Logos extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
   handleScroll(evt){
-    console.log(this.refs.logos.getBoundingClientRect())
     let topRef = this.refs.logos.getBoundingClientRect().top
     if (topRef > 600 && topRef < 1000){
       let percentDiff = (1000 - topRef) / 400
@@ -45,9 +44,17 @@ class Logos extends Component {
   }
   render() {
     let logos = images.map((image, i)=>{
+      let left = i % 2 === 0 ? "14%": "59%"
+      let top = (i * 10 + 10) + "em"
+      let positionStyle = {
+        left,
+        top
+      }
+      console.log(positionStyle)
       return(
         <Logo
           key={i}
+          style={positionStyle}
           imgSrc={image}/>
       )
     })

@@ -26,8 +26,15 @@ body {
 .greeting div {
   transform: translateY(-150%);
 }
+
+/* Logos */
+div.logos {
+  position: relative;
+}
+
 img.logo {
-  width: 28%;
+  position: absolute;
+  width: 25%;
 }
 
 /* Speach Bubbles */

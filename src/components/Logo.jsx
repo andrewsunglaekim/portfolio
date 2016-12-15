@@ -6,6 +6,7 @@ class Logo extends Component {
       <img 
         className='logo'
         src={this.props.imgSrc}
+        style={this.props.style}
         alt={this.props.imgSrc}/>
     )
   }
