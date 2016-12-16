@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
-.greeting, .intro, .military {
+.greeting, .intro {
   height: 100vh; }
 
 /* Speech Bubble Mixins */
@@ -33,6 +33,7 @@ img.logo {
 
 /* Military */
 div.military {
+  height: 140vh;
   position: relative; }
   div.military img {
     position: absolute; }
@@ -41,8 +42,12 @@ div.military {
   div.military img.soldier {
     top: 10%;
     width: 30%; }
-  div.military div.leftSpeechBubble {
-    top: 47%;
+
+/* Family */
+div.family {
+  position: relative;
+  height: 100vh; }
+  div.family div.leftSpeechBubble {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -53,7 +58,7 @@ div.military {
     border: 1px solid black;
     border-radius: 50%;
     padding: 1em; }
-  div.military .leftSpeechBubble:after {
+  div.family .leftSpeechBubble:after {
     position: absolute;
     content: '';
     height: 0;
@@ -64,7 +69,7 @@ div.military {
     border-left: 22px solid transparent;
     border-right: 22px solid transparent;
     border-top: 22px solid white; }
-  div.military .leftSpeechBubble:before {
+  div.family .leftSpeechBubble:before {
     position: absolute;
     content: '';
     height: 0;
@@ -75,6 +80,11 @@ div.military {
     border-left: 23px solid transparent;
     border-right: 23px solid transparent;
     border-top: 23px solid black; }
+  div.family .parents {
+    position: absolute;
+    top: 0;
+    left: 42.5%;
+    width: 15%; }
 
 /* Speach Bubbles */
 div.speachBubble {

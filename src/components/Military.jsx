@@ -7,14 +7,14 @@ class Military extends Component {
     super()
     this.state = {
       flagStyle: {
-        left: "-30%"
+        left: "-40%"
       },
       soldierStyle: {
-        left: "105%"
+        left: "115%"
       }
     }
-    this.orgFlagLeft = -30
-    this.orgSoldierLeft = 105
+    this.orgFlagLeft = -40
+    this.orgSoldierLeft = 115
   }
   componentDidMount(){
     window.addEventListener('scroll', this.handleScroll.bind(this))
@@ -22,7 +22,7 @@ class Military extends Component {
   handleScroll(evt){
     let topRef = this.refs.military.getBoundingClientRect().top
     if (topRef > 100 && topRef < 700) {
-      let percentDiff = topRef / 600
+      let percentDiff = (topRef - 100) / 600
       let diff = 60 - (60 * percentDiff)
       let flagStyleLeft = (this.orgFlagLeft + diff) + "%"
       let soldierStyleLeft = (this.orgSoldierLeft - diff) + "%"

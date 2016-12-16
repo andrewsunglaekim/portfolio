@@ -18,9 +18,6 @@ class Greeting extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
   handleScroll(evt) {
-    console.log(this.state.imgStyle)
-   // let imageLeftMax = "72%"
-   // let divLeftMax = "0%"
     let topRef = this.refs.greeting.getBoundingClientRect().top
     if(topRef > 0 && topRef < 500){
       let percentDiff = topRef / 500
