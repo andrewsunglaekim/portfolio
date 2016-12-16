@@ -79,7 +79,7 @@ div.military {
 
 div.family {
   position: relative;
-  height: 100vh;
+  height: 90vh;
 
   div.leftSpeechBubble {
     @include oval;
@@ -110,6 +110,22 @@ div.family {
     width: 15%;
   }
 
+}
+
+div.kids {
+
+  position: relative;
+  height: 100vh;
+
+  img {
+    position: absolute;
+  }
+  .toddler {
+    width: 15%;
+  }
+  .baby {
+    width: 15%;
+  }
 }
 
 /* Speach Bubbles */

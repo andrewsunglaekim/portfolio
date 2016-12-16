@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import husbandWifeImg from '../../public/images/husband_wife.png' 
 
-class Family extends Component {
+class Parents extends Component {
   constructor (){
     super()
     this.state = {
@@ -19,7 +19,10 @@ class Family extends Component {
   }
   handleScroll(evt){
     let topRef = this.refs.family.getBoundingClientRect().top
-    console.log(topRef)
+    let bubbleText = topRef > 650 ? "Proudly served in the US army in 2 foreign wars across 3 deployments" : "But left to start a Beautiful Family"
+    this.setState({
+      bubbleText
+    })
     if (topRef > 950 && topRef < 1250) {
       let percentDiff = (topRef - 950) / 300
       let diff = 50 - 50 * percentDiff
@@ -61,4 +64,4 @@ class Family extends Component {
   }
 }
 
-export default Family
+export default Parents

@@ -4,7 +4,8 @@ import Greeting from './components/Greeting';
 import Intro from './components/Intro'
 import Logos from './components/Logos';
 import Military from './components/Military'
-import Family from './components/Family'
+import Parents from './components/Parents'
+import Kids from './components/Kids'
 
 class App extends Component {
   render() {
@@ -15,7 +16,8 @@ class App extends Component {
         <Greeting />
         <Logos />
         <Military />
-        <Family />
+        <Parents />
+        <Kids />
       </div>
     );
   }
