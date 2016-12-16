@@ -6,6 +6,7 @@ body {
 .greeting, .intro, .military {
   height: 100vh; }
 
+/* Speech Bubble Mixins */
 /* Greeting */
 .greeting {
   position: relative; }
@@ -40,6 +41,40 @@ div.military {
   div.military img.soldier {
     top: 10%;
     width: 30%; }
+  div.military div.leftSpeechBubble {
+    top: 47%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 10em;
+    width: 20em;
+    background: white;
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 1em; }
+  div.military .leftSpeechBubble:after {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    z-index: 0;
+    top: 20%;
+    left: 89.5%;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid white; }
+  div.military .leftSpeechBubble:before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    z-index: -1;
+    top: 19.5%;
+    left: 89.5%;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    border-top: 23px solid black; }
 
 /* Speach Bubbles */
 div.speachBubble {

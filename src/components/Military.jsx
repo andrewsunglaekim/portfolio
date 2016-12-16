@@ -41,9 +41,11 @@ class Military extends Component {
       <div className='military'
            ref='military'>
         <img src={flagImg}
+             alt={flagImg}
              style={this.state.flagStyle}
              className='flag'/>
         <img src={soldierImg}
+             alt={soldierImg}
              style={this.state.soldierStyle}
              className='soldier'/>
       </div>

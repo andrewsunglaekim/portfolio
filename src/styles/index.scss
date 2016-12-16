@@ -8,6 +8,26 @@ body {
   height: 100vh;
 }
 
+/* Speech Bubble Mixins */
+@mixin oval(){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 10em;
+  width: 20em;
+  background: white;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+@mixin triangle(){
+  position: absolute;
+  content: '';
+  height: 0;
+  width: 0;
+}
+
 /* Greeting */
 .greeting {
   position: relative;
@@ -52,27 +72,32 @@ div.military {
     top: 10%;
     width: 30%;
   }
+  div.leftSpeechBubble{
+    top: 47%;
+    @include oval;
+    padding: 1em;
+  }
+  .leftSpeechBubble:after {
+    @include triangle;
+    z-index: 0;
+    top: 20%;
+    left: 89.5%;
+    border-left: 22px solid transparent;
+    border-right: 22px solid transparent;
+    border-top: 22px solid white;
+  }
+  .leftSpeechBubble:before{
+    @include triangle;
+    z-index: -1;
+    top: 19.5%;
+    left: 89.5%;
+    border-left: 23px solid transparent;
+    border-right: 23px solid transparent;
+    border-top: 23px solid black;
+  }
 }
 
 /* Speach Bubbles */
-@mixin oval(){
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  height: 10em;
-  width: 20em;
-  background: white;
-  border: 1px solid black;
-  border-radius: 50%;
-}
-
-@mixin triangle(){
-  position: absolute;
-  content: '';
-  height: 0;
-  width: 0;
-}
 
 div.speachBubble {
   @include oval
