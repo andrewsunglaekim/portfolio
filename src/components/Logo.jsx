@@ -6,17 +6,19 @@ class Logo extends Component {
     this.centerX = parseFloat(props.style.left.split("%")[0])
     this.centerY = parseFloat(props.style.top.split("em")[0]) - 10
     this.top = parseFloat(props.style.top.split("em")[0])
-    this.radX = 3
-    this.radY = 1.5
+    this.radX = 1
+    this.radY = 0.5
     this.state = {
       style: props.style,
       angle: 0
     }
-    if (!this.intervalID) {
-      this.intervalID = setInterval(() => {
-        this.incrementAngle(0.04)
-      }, 30)
-    }
+    setTimeout(() => {
+      if (!this.intervalID) {
+        this.intervalID = setInterval(() => {
+          this.incrementAngle(0.01)
+        }, 5)
+      }
+    }, Math.random() * 1000)
   }
   incrementAngle(angle){
     let newAngle = this.props.clockwise ? this.state.angle + angle : this.state.angle - angle

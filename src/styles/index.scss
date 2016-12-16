@@ -4,7 +4,7 @@ body {
   font-family: sans-serif;
 }
 
-.greeting, .intro {
+.greeting, .intro, .military {
   height: 100vh;
 }
 
@@ -30,11 +30,28 @@ body {
 /* Logos */
 div.logos {
   position: relative;
+  height: 120em;
 }
 
 img.logo {
   position: absolute;
   width: 25%;
+}
+
+/* Military */
+
+div.military {
+  position: relative;
+  img{ 
+    position: absolute;
+  }
+  img.flag {
+    width: 25%; 
+  }
+  img.soldier {
+    top: 10%;
+    width: 30%;
+  }
 }
 
 /* Speach Bubbles */
@@ -104,3 +121,5 @@ div.topSpeechBubble {
   border-bottom: 23px solid transparent;
   border-left: 23px solid black;
 }
+
+

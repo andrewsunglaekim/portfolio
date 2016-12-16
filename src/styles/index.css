@@ -3,7 +3,7 @@ body {
   padding: 0;
   font-family: sans-serif; }
 
-.greeting, .intro {
+.greeting, .intro, .military {
   height: 100vh; }
 
 /* Greeting */
@@ -23,11 +23,23 @@ body {
 
 /* Logos */
 div.logos {
-  position: relative; }
+  position: relative;
+  height: 120em; }
 
 img.logo {
   position: absolute;
   width: 25%; }
+
+/* Military */
+div.military {
+  position: relative; }
+  div.military img {
+    position: absolute; }
+  div.military img.flag {
+    width: 25%; }
+  div.military img.soldier {
+    top: 10%;
+    width: 30%; }
 
 /* Speach Bubbles */
 div.speachBubble {

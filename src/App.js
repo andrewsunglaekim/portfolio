@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Greeting from './components/Greeting';
 import Intro from './components/Intro'
 import Logos from './components/Logos';
+import Military from './components/Military'
 
 class App extends Component {
   render() {
@@ -12,6 +13,7 @@ class App extends Component {
         <Intro />
         <Greeting />
         <Logos />
+        <Military />
       </div>
     );
   }
