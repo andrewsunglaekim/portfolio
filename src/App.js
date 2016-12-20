@@ -14,10 +14,10 @@ class App extends Component {
         <Header />
         <Intro />
         <Greeting />
-        <Logos />
         <Military />
         <Parents />
         <Kids />
+        <Logos />
       </div>
     );
   }
